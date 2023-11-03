@@ -17,7 +17,7 @@ public class Universite implements Serializable{
     @JsonIgnore
     private Set<Departement> departements;
     public Universite() {
-        // TODO Auto-generated constructor stub
+        // Default constructor with no specific task.
     }
 
     public Universite(String nomUniv) {
