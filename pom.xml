@@ -64,6 +64,8 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>kaddem</finalName>
+
     </build>
 
 </project>
