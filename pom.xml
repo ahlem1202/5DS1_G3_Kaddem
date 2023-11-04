@@ -67,5 +67,11 @@
         <finalName>kaddem</finalName>
 
     </build>
-
+<distributionManagement>
+<repository>
+<id>deploymentRepo</id>
+<name> Nexus Repository </name>
+<url>http://192.168.1.81:8081/repository/maven-snapshots/</url>
+</repository>
+</distributionManagement>
 </project>
