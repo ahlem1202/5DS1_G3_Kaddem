@@ -7,6 +7,7 @@ import tn.esprit.spring.kaddem.entities.Universite;
 import tn.esprit.spring.kaddem.repositories.DepartementRepository;
 import tn.esprit.spring.kaddem.repositories.UniversiteRepository;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -38,14 +39,13 @@ public class UniversiteServiceImpl implements IUniversiteService {
         Optional<Universite> optionalUniversite = universiteRepository.findById(idUniversite);
 
         if (optionalUniversite.isPresent()) {
-            Universite u = optionalUniversite.get();
-            return u;
+            return optionalUniversite.get();
         } else {
-            // Handle the case where the university with the given ID is not found.
-            // You can log an error or throw an exception, depending on your error-handling strategy.
-            return null; // Or throw an exception if you prefer.
+            return new Universite(); // Or throw an exception if you prefer.
         }
     }
+
+
 
 
     public void deleteUniversite(Integer idUniversite) {
@@ -70,9 +70,9 @@ public class UniversiteServiceImpl implements IUniversiteService {
         if (u != null) {
             return u.getDepartements();
         } else {
-            // Handle the case where the university is not found.
-            // You can log an error or throw an exception, depending on your error-handling strategy.
-            return null; // Or return an empty set if you prefer.
+            // Return an empty set instead of null
+            return Collections.emptySet();
         }
     }
+
 }
