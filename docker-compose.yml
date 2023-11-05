@@ -11,7 +11,7 @@ services:
 
 
   spring_app:
-    image: hlemzagh/kaddemproject
+    image: ahlemzagh/kaddemproject
     container_name: devopscontainer
     restart: on-failure
     ports:
